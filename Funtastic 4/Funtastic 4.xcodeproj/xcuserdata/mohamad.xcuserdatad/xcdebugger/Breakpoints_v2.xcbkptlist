@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "F7771C54-65E7-4FE6-953F-F291ED5296DF"
+   type = "1"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "80A82545-B435-4D8C-B1C2-D3FA766940E9"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Funtastic 4/Views/playersNameView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "playersNameView"
+            landmarkType = "14">
+            <Locations>
+               <Location
+                  uuid = "80A82545-B435-4D8C-B1C2-D3FA766940E9 - af552748b83c3bf9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "property wrapper backing initializer of Funtastic_4.playersNameView.showView : Swift.Bool"
+                  moduleName = "Funtastic 4"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mohamad/Documents/GitHub/finalProject/Funtastic%204/Funtastic%204/Views/playersNameView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "20">
+               </Location>
+               <Location
+                  uuid = "80A82545-B435-4D8C-B1C2-D3FA766940E9 - 53400585188dbe93"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Funtastic_4.playersNameView.showView.getter : Swift.Bool"
+                  moduleName = "Funtastic 4"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mohamad/Documents/GitHub/finalProject/Funtastic%204/Funtastic%204/Views/playersNameView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "126">
+               </Location>
+               <Location
+                  uuid = "80A82545-B435-4D8C-B1C2-D3FA766940E9 - 104eb9c6c5b2968f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Funtastic_4.playersNameView.showView.setter : Swift.Bool"
+                  moduleName = "Funtastic 4"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mohamad/Documents/GitHub/finalProject/Funtastic%204/Funtastic%204/Views/playersNameView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "138">
+               </Location>
+               <Location
+                  uuid = "80A82545-B435-4D8C-B1C2-D3FA766940E9 - 35082e6afe6d956a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Funtastic_4.playersNameView.showView.modify : Swift.Bool"
+                  moduleName = "Funtastic 4"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mohamad/Documents/GitHub/finalProject/Funtastic%204/Funtastic%204/Views/playersNameView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "57">
+               </Location>
+               <Location
+                  uuid = "80A82545-B435-4D8C-B1C2-D3FA766940E9 - 2499793544b18a8f"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Funtastic_4.playersNameView.showView.modify : Swift.Bool with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Funtastic 4"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mohamad/Documents/GitHub/finalProject/Funtastic%204/Funtastic%204/Views/playersNameView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "17">
+               </Location>
+               <Location
+                  uuid = "80A82545-B435-4D8C-B1C2-D3FA766940E9 - 140dfb37b4a72757"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Funtastic_4.playersNameView.$showView.getter : SwiftUI.Binding&lt;Swift.Bool&gt;"
+                  moduleName = "Funtastic 4"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mohamad/Documents/GitHub/finalProject/Funtastic%204/Funtastic%204/Views/playersNameView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "137">
+               </Location>
+               <Location
+                  uuid = "80A82545-B435-4D8C-B1C2-D3FA766940E9 - ab095bd0d1541068"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Funtastic_4.playersNameView.init() -&gt; Funtastic_4.playersNameView"
+                  moduleName = "Funtastic 4"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/mohamad/Documents/GitHub/finalProject/Funtastic%204/Funtastic%204/Views/playersNameView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "12"
+                  endingLineNumber = "12"
+                  offsetFromSymbolStart = "133">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>

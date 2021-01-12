@@ -12,14 +12,14 @@
         var body: some View {
             VStack(){
                 Spacer()
-                Image(systemName : "gear")
+                Image("logo")
                     .resizable()
                     .frame(width: 250.0, height: 250.0)
                 Spacer()
                 Button(action: {
                             self.showingDetail.toggle()
                         }) {
-                            Text("Show Detail")
+                            Text("play")
                         }.sheet(isPresented: $showingDetail) {
                             playersNameView()
                         }

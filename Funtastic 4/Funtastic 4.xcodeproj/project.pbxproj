@@ -11,11 +11,13 @@
 		D13402BB25AA624E001F3EC0 /* gameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13402BA25AA624E001F3EC0 /* gameView.swift */; };
 		D13402BE25AA626E001F3EC0 /* recoredsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13402BD25AA626E001F3EC0 /* recoredsView.swift */; };
 		D13402C125AA6A06001F3EC0 /* circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13402C025AA6A06001F3EC0 /* circle.swift */; };
+		D161A94D25ABD9BA00C0E590 /* testView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D161A94C25ABD9BA00C0E590 /* testView.swift */; };
 		D166FA4E25ABC35D00BB6FA8 /* winlogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D166FA4D25ABC35D00BB6FA8 /* winlogic.swift */; };
 		D177C65725AA52FC00ECF35B /* Funtastic_4App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D177C65625AA52FC00ECF35B /* Funtastic_4App.swift */; };
 		D177C65925AA52FC00ECF35B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D177C65825AA52FC00ECF35B /* ContentView.swift */; };
 		D177C65B25AA52FE00ECF35B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D177C65A25AA52FE00ECF35B /* Assets.xcassets */; };
 		D177C65E25AA52FE00ECF35B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D177C65D25AA52FE00ECF35B /* Preview Assets.xcassets */; };
+		D1EBE65225ACE3870075A280 /* testViewToo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EBE65125ACE3870075A280 /* testViewToo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +25,7 @@
 		D13402BA25AA624E001F3EC0 /* gameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameView.swift; sourceTree = "<group>"; };
 		D13402BD25AA626E001F3EC0 /* recoredsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recoredsView.swift; sourceTree = "<group>"; };
 		D13402C025AA6A06001F3EC0 /* circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = circle.swift; sourceTree = "<group>"; };
+		D161A94C25ABD9BA00C0E590 /* testView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testView.swift; sourceTree = "<group>"; };
 		D166FA4D25ABC35D00BB6FA8 /* winlogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = winlogic.swift; sourceTree = "<group>"; };
 		D177C65325AA52FC00ECF35B /* Funtastic 4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Funtastic 4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D177C65625AA52FC00ECF35B /* Funtastic_4App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Funtastic_4App.swift; sourceTree = "<group>"; };
@@ -30,6 +33,7 @@
 		D177C65A25AA52FE00ECF35B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D177C65D25AA52FE00ECF35B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D177C65F25AA52FE00ECF35B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1EBE65125ACE3870075A280 /* testViewToo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testViewToo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +55,8 @@
 				D13402C025AA6A06001F3EC0 /* circle.swift */,
 				D13402BD25AA626E001F3EC0 /* recoredsView.swift */,
 				D166FA4D25ABC35D00BB6FA8 /* winlogic.swift */,
+				D161A94C25ABD9BA00C0E590 /* testView.swift */,
+				D1EBE65125ACE3870075A280 /* testViewToo.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -163,8 +169,10 @@
 			files = (
 				D177C65925AA52FC00ECF35B /* ContentView.swift in Sources */,
 				D177C65725AA52FC00ECF35B /* Funtastic_4App.swift in Sources */,
+				D1EBE65225ACE3870075A280 /* testViewToo.swift in Sources */,
 				D13402BB25AA624E001F3EC0 /* gameView.swift in Sources */,
 				D166FA4E25ABC35D00BB6FA8 /* winlogic.swift in Sources */,
+				D161A94D25ABD9BA00C0E590 /* testView.swift in Sources */,
 				D13402C125AA6A06001F3EC0 /* circle.swift in Sources */,
 				D13402BE25AA626E001F3EC0 /* recoredsView.swift in Sources */,
 				D13402B725AA6080001F3EC0 /* playersNameView.swift in Sources */,

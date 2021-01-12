@@ -45,12 +45,38 @@
 //        }
 //    }
 //}
-
 import SwiftUI
 struct gameView: View {
+    
+    func getRandStatment() -> String
+    {
+        let date = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = " dd-MM-yyyy HH:mm "
+        let currentDate = formatter.string(from: date)
+        var statnment = ""
+        let WinnerStatmentsLosserArr = [" DESTROIED " , " got an esay win against " , " SMACHED " , " totaly annihilated "]
+        let LosserStatmentsWinnerArr = [" got the L against  " , " was compltitly destroied by  " , " tears was showwing whiel losing to  "]
+        let rand = Int.random(in: 0..<2)
+        if rand == 0
+        {
+            statnment = "In" + currentDate + winner + WinnerStatmentsLosserArr.randomElement()! + losser
+        }
+        else
+        {
+            statnment = "In" + currentDate + losser + LosserStatmentsWinnerArr.randomElement()! + winner
+        }
+        return statnment
+    }
+    
     @State var circles : [[circle]] = .init(repeating: .init(repeating: circle() , count:7 ), count: 7)
     @State var playerTurn: Color = Color.blue
+    @State var shownPlayerTurn = ""
     @State var winner = ""
+    @State var losser = ""
+    @Binding var p1 : String
+    @Binding var p2 : String
+    @State var winTemp : Color = Color.white
     func getWinner() -> Color {
         if circles[0][0].color == Color.blue &&  circles[1][0].color == Color.blue &&  circles[2][0].color == Color.blue &&  circles[3][0].color == Color.blue {return Color.blue}
         if circles[0][0].color == Color.red &&  circles[1][0].color == Color.red &&  circles[2][0].color == Color.red &&  circles[3][0].color == Color.red {return Color.red}
@@ -190,7 +216,7 @@ struct gameView: View {
         if circles[3][5].color == Color.red &&  circles[4][4].color == Color.red &&  circles[5][3].color == Color.red &&  circles[6][2].color == Color.red {return Color.red}
         if circles[6][5].color == Color.blue &&  circles[5][4].color == Color.blue &&  circles[4][3].color == Color.blue &&  circles[3][2].color == Color.blue {return Color.blue}
         if circles[6][5].color == Color.red &&  circles[5][4].color == Color.red &&  circles[4][3].color == Color.red &&  circles[3][2].color == Color.red {return Color.red}
-        else { return Color.white}
+        return Color.white
     }
     
     var body: some View {
@@ -198,21 +224,14 @@ struct gameView: View {
             Color.black
                 .ignoresSafeArea()
             VStack(spacing : 7){
-                Text("\(winner)wins")
+                Text("\(shownPlayerTurn)" )
+                    .foregroundColor(.white)
+                Text("")
                     .foregroundColor(.white)
                 ForEach(0 ..< 7) { r in
                     HStack(spacing : 7){
                         ForEach(0 ..< 7) { c in
                             Button(action: {
-                                let winTemp = getWinner()
-                                if winTemp != Color.white {
-                                    if winTemp == Color.blue {
-                                        winner = "Blue"
-                                    }
-                                    else {
-                                        winner = "red"
-                                    }
-                                }
                                 for x in (0..<7).reversed() {
                                     if circles[x][c].isEmpty == true
                                     {
@@ -228,10 +247,25 @@ struct gameView: View {
                                 }
                                 if playerTurn == Color.blue {
                                     playerTurn = Color.red
+                                    shownPlayerTurn = p2 + "Turn"
                                 }
                                 else {
                                     playerTurn = Color.blue
+                                    shownPlayerTurn = p1 + "Turn"
                                 }
+                                let winTemp = getWinner()
+                                if winTemp != Color.white {
+                                    if winTemp == Color.blue {
+                                        winner = p1
+                                        losser = p2
+                                        
+                                    }
+                                    else {
+                                        winner = p2
+                                        losser = p1
+                                    }
+                                }
+                                
                             }, label: {
                                 Text("")
                                     .font(.system(size: 60))
@@ -263,9 +297,9 @@ struct gameView: View {
 //
 //
 //}
-struct gameView_Previews: PreviewProvider {
-    static var previews: some View {
-        gameView()
-            .previewDevice("iPhone 11")
-    }
-}
+//struct gameView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        gameView(p1: "Test ", p2: "Test")
+//            .previewDevice("iPhone 11")
+//    }
+//}
