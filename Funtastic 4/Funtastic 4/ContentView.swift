@@ -6,32 +6,38 @@
     //
     
     import SwiftUI
-
+    
     struct ContentView: View {
-        @State var showingDetail = false
         var body: some View {
-            VStack(){
-                Spacer()
-                Image("logo")
-                    .resizable()
-                    .frame(width: 250.0, height: 250.0)
-                Spacer()
-                Button(action: {
-                            self.showingDetail.toggle()
-                        }) {
+            NavigationView(){
+                VStack(){
+                    Spacer()
+                    Image("logo")
+                        .resizable()
+                        .frame(width: 400, height: 400)
+                    Spacer()
+                    Spacer()
+                    NavigationLink(
+                        destination: playersNameView(),
+                        label: {
                             Text("play")
-                        }.sheet(isPresented: $showingDetail) {
-                            playersNameView()
-                        }
-                Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                    Text("Games Recores")
-                        .padding()
-                })
-                Spacer()
-                
+                                .padding()
+                        })
+                    Spacer()
+                    NavigationLink(
+                        destination: recoredsView(),
+                        label: {
+                            Text("Games Recores")
+                                .padding()
+                        })
+                    Spacer()
+                    Spacer()
+                }
             }
         }
     }
+    
+    
     
     struct ContentView_Previews: PreviewProvider {
         static var previews: some View {

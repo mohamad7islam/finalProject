@@ -6,11 +6,13 @@
 //
 
 import SwiftUI
+import Foundation
 
 struct recoredsView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-    }
+        let strings = userDefaults.object(forKey: "myKey") as? [String]
+        let p1 = strings![0]
+        Text("\(p1)" )    }
 }
 
 struct recoredsView_Previews: PreviewProvider {

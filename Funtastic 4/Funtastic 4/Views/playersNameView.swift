@@ -9,7 +9,6 @@ import SwiftUI
 
 import Foundation
 
-let userDefaults = UserDefaults.standard
 
 
 struct playersNameView: View {
@@ -38,8 +37,6 @@ struct playersNameView: View {
                         .padding()
                     Button(action: {
                         self.showView.toggle()
-                        let array = [p1,p2]
-                        userDefaults.set(array, forKey: "myKey")
                     }, label: {
                         Text("Lets play")
                             .padding()

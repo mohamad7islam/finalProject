@@ -46,6 +46,7 @@
 //    }
 //}
 import SwiftUI
+let userDefaults = UserDefaults.standard
 struct gameView: View {
     
     func getRandStatment() -> String
@@ -77,6 +78,7 @@ struct gameView: View {
     @Binding var p1 : String
     @Binding var p2 : String
     @State var winTemp : Color = Color.white
+    
     func getWinner() -> Color {
         if circles[0][0].color == Color.blue &&  circles[1][0].color == Color.blue &&  circles[2][0].color == Color.blue &&  circles[3][0].color == Color.blue {return Color.blue}
         if circles[0][0].color == Color.red &&  circles[1][0].color == Color.red &&  circles[2][0].color == Color.red &&  circles[3][0].color == Color.red {return Color.red}
@@ -258,12 +260,13 @@ struct gameView: View {
                                     if winTemp == Color.blue {
                                         winner = p1
                                         losser = p2
-                                        
                                     }
                                     else {
                                         winner = p2
                                         losser = p1
                                     }
+                                    let array = [getRandStatment()]
+                                    userDefaults.set(array, forKey: "myKey")
                                 }
                                 
                             }, label: {
