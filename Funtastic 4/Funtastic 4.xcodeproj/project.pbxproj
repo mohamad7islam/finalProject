@@ -17,6 +17,7 @@
 		D177C65925AA52FC00ECF35B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D177C65825AA52FC00ECF35B /* ContentView.swift */; };
 		D177C65B25AA52FE00ECF35B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D177C65A25AA52FE00ECF35B /* Assets.xcassets */; };
 		D177C65E25AA52FE00ECF35B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D177C65D25AA52FE00ECF35B /* Preview Assets.xcassets */; };
+		D1B98E5925AE239600439E56 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B98E5825AE239600439E56 /* PopupView.swift */; };
 		D1EBE65225ACE3870075A280 /* testViewToo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EBE65125ACE3870075A280 /* testViewToo.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +34,7 @@
 		D177C65A25AA52FE00ECF35B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D177C65D25AA52FE00ECF35B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D177C65F25AA52FE00ECF35B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D1B98E5825AE239600439E56 /* PopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		D1EBE65125ACE3870075A280 /* testViewToo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testViewToo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -50,6 +52,7 @@
 		D13402B525AA6064001F3EC0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				D1B98E5825AE239600439E56 /* PopupView.swift */,
 				D13402B625AA6080001F3EC0 /* playersNameView.swift */,
 				D13402BA25AA624E001F3EC0 /* gameView.swift */,
 				D13402C025AA6A06001F3EC0 /* circle.swift */,
@@ -170,6 +173,7 @@
 				D177C65925AA52FC00ECF35B /* ContentView.swift in Sources */,
 				D177C65725AA52FC00ECF35B /* Funtastic_4App.swift in Sources */,
 				D1EBE65225ACE3870075A280 /* testViewToo.swift in Sources */,
+				D1B98E5925AE239600439E56 /* PopupView.swift in Sources */,
 				D13402BB25AA624E001F3EC0 /* gameView.swift in Sources */,
 				D166FA4E25ABC35D00BB6FA8 /* winlogic.swift in Sources */,
 				D161A94D25ABD9BA00C0E590 /* testView.swift in Sources */,
