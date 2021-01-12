@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D123A3E625AE6B97001F6B20 /* rm_playtime_3d.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D123A3E525AE6B97001F6B20 /* rm_playtime_3d.ttf */; };
+		D123A3E925AE6BC3001F6B20 /* rm_playtime_solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D123A3E825AE6BC3001F6B20 /* rm_playtime_solid.ttf */; };
 		D13402B725AA6080001F3EC0 /* playersNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13402B625AA6080001F3EC0 /* playersNameView.swift */; };
 		D13402BB25AA624E001F3EC0 /* gameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13402BA25AA624E001F3EC0 /* gameView.swift */; };
 		D13402BE25AA626E001F3EC0 /* recoredsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13402BD25AA626E001F3EC0 /* recoredsView.swift */; };
@@ -22,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D123A3E525AE6B97001F6B20 /* rm_playtime_3d.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = rm_playtime_3d.ttf; sourceTree = "<group>"; };
+		D123A3E825AE6BC3001F6B20 /* rm_playtime_solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = rm_playtime_solid.ttf; sourceTree = "<group>"; };
 		D13402B625AA6080001F3EC0 /* playersNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playersNameView.swift; sourceTree = "<group>"; };
 		D13402BA25AA624E001F3EC0 /* gameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameView.swift; sourceTree = "<group>"; };
 		D13402BD25AA626E001F3EC0 /* recoredsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recoredsView.swift; sourceTree = "<group>"; };
@@ -49,6 +53,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		D123A3E425AE6B7A001F6B20 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D123A3E525AE6B97001F6B20 /* rm_playtime_3d.ttf */,
+				D123A3E825AE6BC3001F6B20 /* rm_playtime_solid.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		D13402B525AA6064001F3EC0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +96,7 @@
 		D177C65525AA52FC00ECF35B /* Funtastic 4 */ = {
 			isa = PBXGroup;
 			children = (
+				D123A3E425AE6B7A001F6B20 /* Fonts */,
 				D177C65625AA52FC00ECF35B /* Funtastic_4App.swift */,
 				D177C65825AA52FC00ECF35B /* ContentView.swift */,
 				D13402B525AA6064001F3EC0 /* Views */,
@@ -160,6 +174,8 @@
 			files = (
 				D177C65E25AA52FE00ECF35B /* Preview Assets.xcassets in Resources */,
 				D177C65B25AA52FE00ECF35B /* Assets.xcassets in Resources */,
+				D123A3E925AE6BC3001F6B20 /* rm_playtime_solid.ttf in Resources */,
+				D123A3E625AE6B97001F6B20 /* rm_playtime_3d.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
