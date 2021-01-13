@@ -4,6 +4,7 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
+		<string>prstart.ttf</string>
 		<string>rm_playtime_solid.ttf</string>
 		<string>rm_playtime_3d.ttf</string>
 	</array>

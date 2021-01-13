@@ -265,8 +265,9 @@ struct gameView: View {
                                         winner = p2
                                         losser = p1
                                     }
-                                    let array = [getRandStatment()]
-                                    userDefaults.set(array, forKey: "myKey")
+                                    var strings = userDefaults.object(forKey: "myKey") as? [String]
+                                    strings!.append(getRandStatment())
+                                    userDefaults.set(strings, forKey: "myKey")
                                 }
                                 
                             }, label: {

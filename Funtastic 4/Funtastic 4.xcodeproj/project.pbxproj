@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D123A3E625AE6B97001F6B20 /* rm_playtime_3d.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D123A3E525AE6B97001F6B20 /* rm_playtime_3d.ttf */; };
-		D123A3E925AE6BC3001F6B20 /* rm_playtime_solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D123A3E825AE6BC3001F6B20 /* rm_playtime_solid.ttf */; };
+		D123A3F825AE6EE8001F6B20 /* rm_playtime_solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D123A3F725AE6EE8001F6B20 /* rm_playtime_solid.ttf */; };
+		D123A3FB25AE6EF5001F6B20 /* rm_playtime_3d.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D123A3FA25AE6EF5001F6B20 /* rm_playtime_3d.ttf */; };
 		D13402B725AA6080001F3EC0 /* playersNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13402B625AA6080001F3EC0 /* playersNameView.swift */; };
 		D13402BB25AA624E001F3EC0 /* gameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13402BA25AA624E001F3EC0 /* gameView.swift */; };
 		D13402BE25AA626E001F3EC0 /* recoredsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13402BD25AA626E001F3EC0 /* recoredsView.swift */; };
@@ -20,12 +20,14 @@
 		D177C65B25AA52FE00ECF35B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D177C65A25AA52FE00ECF35B /* Assets.xcassets */; };
 		D177C65E25AA52FE00ECF35B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D177C65D25AA52FE00ECF35B /* Preview Assets.xcassets */; };
 		D1B98E5925AE239600439E56 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B98E5825AE239600439E56 /* PopupView.swift */; };
+		D1D1A96B25AE6FDD005AF967 /* prstart.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1D1A96A25AE6FDD005AF967 /* prstart.ttf */; };
+		D1D1A97525AE7368005AF967 /* loadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D1A97425AE7368005AF967 /* loadingView.swift */; };
 		D1EBE65225ACE3870075A280 /* testViewToo.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1EBE65125ACE3870075A280 /* testViewToo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D123A3E525AE6B97001F6B20 /* rm_playtime_3d.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = rm_playtime_3d.ttf; sourceTree = "<group>"; };
-		D123A3E825AE6BC3001F6B20 /* rm_playtime_solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = rm_playtime_solid.ttf; sourceTree = "<group>"; };
+		D123A3F725AE6EE8001F6B20 /* rm_playtime_solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = rm_playtime_solid.ttf; sourceTree = "<group>"; };
+		D123A3FA25AE6EF5001F6B20 /* rm_playtime_3d.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = rm_playtime_3d.ttf; sourceTree = "<group>"; };
 		D13402B625AA6080001F3EC0 /* playersNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playersNameView.swift; sourceTree = "<group>"; };
 		D13402BA25AA624E001F3EC0 /* gameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameView.swift; sourceTree = "<group>"; };
 		D13402BD25AA626E001F3EC0 /* recoredsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recoredsView.swift; sourceTree = "<group>"; };
@@ -39,6 +41,8 @@
 		D177C65D25AA52FE00ECF35B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D177C65F25AA52FE00ECF35B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1B98E5825AE239600439E56 /* PopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
+		D1D1A96A25AE6FDD005AF967 /* prstart.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = prstart.ttf; sourceTree = "<group>"; };
+		D1D1A97425AE7368005AF967 /* loadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loadingView.swift; sourceTree = "<group>"; };
 		D1EBE65125ACE3870075A280 /* testViewToo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testViewToo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -56,8 +60,9 @@
 		D123A3E425AE6B7A001F6B20 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				D123A3E525AE6B97001F6B20 /* rm_playtime_3d.ttf */,
-				D123A3E825AE6BC3001F6B20 /* rm_playtime_solid.ttf */,
+				D1D1A96A25AE6FDD005AF967 /* prstart.ttf */,
+				D123A3FA25AE6EF5001F6B20 /* rm_playtime_3d.ttf */,
+				D123A3F725AE6EE8001F6B20 /* rm_playtime_solid.ttf */,
 			);
 			path = Fonts;
 			sourceTree = "<group>";
@@ -73,6 +78,7 @@
 				D166FA4D25ABC35D00BB6FA8 /* winlogic.swift */,
 				D161A94C25ABD9BA00C0E590 /* testView.swift */,
 				D1EBE65125ACE3870075A280 /* testViewToo.swift */,
+				D1D1A97425AE7368005AF967 /* loadingView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -172,10 +178,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D123A3F825AE6EE8001F6B20 /* rm_playtime_solid.ttf in Resources */,
 				D177C65E25AA52FE00ECF35B /* Preview Assets.xcassets in Resources */,
 				D177C65B25AA52FE00ECF35B /* Assets.xcassets in Resources */,
-				D123A3E925AE6BC3001F6B20 /* rm_playtime_solid.ttf in Resources */,
-				D123A3E625AE6B97001F6B20 /* rm_playtime_3d.ttf in Resources */,
+				D123A3FB25AE6EF5001F6B20 /* rm_playtime_3d.ttf in Resources */,
+				D1D1A96B25AE6FDD005AF967 /* prstart.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,6 +195,7 @@
 			files = (
 				D177C65925AA52FC00ECF35B /* ContentView.swift in Sources */,
 				D177C65725AA52FC00ECF35B /* Funtastic_4App.swift in Sources */,
+				D1D1A97525AE7368005AF967 /* loadingView.swift in Sources */,
 				D1EBE65225ACE3870075A280 /* testViewToo.swift in Sources */,
 				D1B98E5925AE239600439E56 /* PopupView.swift in Sources */,
 				D13402BB25AA624E001F3EC0 /* gameView.swift in Sources */,

@@ -31,7 +31,7 @@
                                 destination: playersNameView(),
                                 label: {
                                     Text("play")
-                                        .font(.custom("rm_playtime", size: 48, relativeTo: .body))
+                                        .font(.custom("prstart", size: 48, relativeTo: .body))
                                         .foregroundColor(.red)
                                         .padding()
                                 }).onLongPressGesture {
@@ -42,7 +42,7 @@
                                 destination: recoredsView(),
                                 label: {
                                     Text("Games Recores")
-                                        .font(.custom("rm_playtime", size: 48, relativeTo: .body))
+                                        .font(.custom("prstart", size: 48, relativeTo: .body))
                                         .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                                         .padding()
                                 }).onLongPressGesture {
