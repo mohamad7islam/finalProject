@@ -48,9 +48,6 @@
 import SwiftUI
 let userDefaults = UserDefaults.standard
 struct gameView: View {
-    init() {
-        restart()
-    }
     func getRandStatment() -> String
     {
         let date = Date()
