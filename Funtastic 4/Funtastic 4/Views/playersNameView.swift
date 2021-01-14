@@ -17,7 +17,7 @@ struct playersNameView: View {
     @State var showView = 0
 
     private func delay() {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 7) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 showView = 2
             }
         }

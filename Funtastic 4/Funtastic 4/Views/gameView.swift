@@ -48,7 +48,9 @@
 import SwiftUI
 let userDefaults = UserDefaults.standard
 struct gameView: View {
-    
+    init() {
+        restart()
+    }
     func getRandStatment() -> String
     {
         let date = Date()
@@ -69,8 +71,18 @@ struct gameView: View {
         }
         return statnment
     }
+    func isDraw() -> Bool {
+        for r in 0..<7 {
+            for c in 0..<6 {
+                if circles[r][c].color == Color.white {
+                    return false
+                }
+            }
+        }
+        return true
+    }
     
-    @State var circles : [[circle]] = .init(repeating: .init(repeating: circle() , count:7 ), count: 7)
+    @State var circles : [[circle]] = .init(repeating: .init(repeating: circle() , count:6 ), count: 7)
     @State var playerTurn: Color = Color.blue
     @State var shownPlayerTurn = ""
     @State var winner = ""
@@ -78,7 +90,17 @@ struct gameView: View {
     @Binding var p1 : String
     @Binding var p2 : String
     @State var winTemp : Color = Color.white
-    
+    @State private var showingAlert = false
+    @State var alertbody = ""
+    func restart(){
+        circles  = [[circle]](repeating: [circle](repeating: circle() , count:6 ), count: 7)
+        playerTurn = Color.blue
+        shownPlayerTurn = ""
+        winner = ""
+        losser = ""
+        winTemp = Color.white
+        alertbody = ""
+    }
     func getWinner() -> Color {
         if circles[0][0].color == Color.blue &&  circles[1][0].color == Color.blue &&  circles[2][0].color == Color.blue &&  circles[3][0].color == Color.blue {return Color.blue}
         if circles[0][0].color == Color.red &&  circles[1][0].color == Color.red &&  circles[2][0].color == Color.red &&  circles[3][0].color == Color.red {return Color.red}
@@ -220,7 +242,6 @@ struct gameView: View {
         if circles[6][5].color == Color.red &&  circles[5][4].color == Color.red &&  circles[4][3].color == Color.red &&  circles[3][2].color == Color.red {return Color.red}
         return Color.white
     }
-    
     var body: some View {
         ZStack{
             Color.black
@@ -232,8 +253,9 @@ struct gameView: View {
                     .foregroundColor(.white)
                 ForEach(0 ..< 7) { r in
                     HStack(spacing : 7){
-                        ForEach(0 ..< 7) { c in
+                        ForEach(0 ..< 6) { c in
                             Button(action: {
+                                
                                 for x in (0..<7).reversed() {
                                     if circles[x][c].isEmpty == true
                                     {
@@ -247,13 +269,17 @@ struct gameView: View {
                                         break
                                     }
                                 }
+                                if isDraw(){
+                                    alertbody = "what a boaring game !"
+                                    showingAlert = true
+                                }
                                 if playerTurn == Color.blue {
                                     playerTurn = Color.red
-                                    shownPlayerTurn = p2 + "Turn"
+                                    shownPlayerTurn = p2 + " Turn"
                                 }
                                 else {
                                     playerTurn = Color.blue
-                                    shownPlayerTurn = p1 + "Turn"
+                                    shownPlayerTurn = p1 + " Turn"
                                 }
                                 let winTemp = getWinner()
                                 if winTemp != Color.white {
@@ -266,10 +292,17 @@ struct gameView: View {
                                         losser = p1
                                     }
                                     var strings = userDefaults.object(forKey: "myKey") as? [String]
+                                    if strings == nil {
+                                        var newTempArr = [getRandStatment()]
+                                        userDefaults.set(newTempArr, forKey: "myKey")
+                                    }
+                                    else{
                                     strings!.append(getRandStatment())
                                     userDefaults.set(strings, forKey: "myKey")
+                                    }
+                                    alertbody = winner + "wins"
+                                    showingAlert = true
                                 }
-                                
                             }, label: {
                                 Text("")
                                     .font(.system(size: 60))
@@ -281,6 +314,12 @@ struct gameView: View {
                             
                         }
                     }
+                }.alert(isPresented: $showingAlert) {
+                    Alert(title: Text("Game Over"), message: Text(alertbody),
+                          dismissButton: Alert.Button.default(
+                              Text("play again"), action: { restart() }
+                          )
+                      )
                 }
             }
         }
@@ -306,4 +345,9 @@ struct gameView: View {
 //        gameView(p1: "Test ", p2: "Test")
 //            .previewDevice("iPhone 11")
 //    }
+//} .alert(isPresented:$showingAlert) {
+//Alert(title: Text("Are you sure you want to delete this?"), message: Text("There is no undo"), primaryButton: .destructive(Text("Delete")) {
+//        print("Deleting...")
+//}, secondaryButton: .cancel())
+//}
 //}

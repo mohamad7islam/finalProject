@@ -55,17 +55,17 @@
                         }
                     }
                 }
-            }.popup(isPresented: $showingPopup, autohideIn: 2) {
-                HStack {
-                    Text("Congratulations")
+            }.popup(isPresented: $showingPopup, autohideIn: 5) {
+                VStack {
+                    Text("🎉Congratulations🎉")
                         .font(.largeTitle)
-                        .foregroundColor(.white)
+                        .foregroundColor(.black)
                     Text("you found the easter egg , send the sceenshoot to the discored channel to recive your price  ")
-                        .foregroundColor(.white)
+                        .foregroundColor(.black)
                 }
-                .frame(width:500, height: 500)
+                .frame(width:300   , height: 300 )
                 .background(Color(red: 1, green: 1, blue: 1))
-                .cornerRadius(30.0)
+                .cornerRadius(50.0)
 }
 
         }
