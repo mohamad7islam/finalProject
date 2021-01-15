@@ -9,14 +9,22 @@ import SwiftUI
 import Foundation
 
 struct recoredsView: View {
+    
+    // for share sheet
     func actionSheet( S : String) {
         let data = String(S)
         let av = UIActivityViewController(activityItems: [data], applicationActivities: nil)
         UIApplication.shared.windows.first?.rootViewController?.present(av, animated: true, completion: nil)
     }
+    
+    
+    // to make sure the list is reloaded evry time the user enters this view
     init() {
         self.records = userDefaults.object(forKey: "myKey") as? [String]
     }
+    
+    
+    
     @State var records = userDefaults.object(forKey: "myKey") as? [String]
     var body: some View {
         List {

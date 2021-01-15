@@ -14,19 +14,18 @@ import Foundation
 struct playersNameView: View {
     @State var p1 : String = ""
     @State var p2 : String = ""
-    @State var showView = 0
-
-    private func delay() {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                showView = 2
-            }
+    @State var showView = 0 // three way flag to switch between three views playerName , loadingView and GameView
+    
+    private func delay() { // delay for the loading screen
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            showView = 2
         }
+    }
     var body: some View {
         ZStack{
             if self.showView == 2 {
                 VStack {
                     gameView(p1: $p1, p2: $p2)
-                   // testViewToo()
                 }
             }
             else if self.showView == 1 {
@@ -42,14 +41,21 @@ struct playersNameView: View {
                     VStack{
                         TextField("Player one name", text: $p1)
                             .multilineTextAlignment(.center)
+                            .disableAutocorrection(true)
                             .frame(width: 200, height: 100, alignment: .center)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .padding()
-                        Text("VS")
-                            .font(.system(size: 200))
-                            .foregroundColor(.white)
+                        HStack{
+                            Text("V")
+                                .font(.custom("BebasNeue-Regular", size:200))
+                                .foregroundColor(.red)
+                            Text("S")
+                                .font(.custom("BebasNeue-Regular", size:200))
+                                .foregroundColor(.blue)
+                        }
                         TextField("Player two name", text: $p2)
                             .multilineTextAlignment(.center)
+                            .disableAutocorrection(true)
                             .frame(width: 200, height: 100, alignment: .center)
                             .textFieldStyle(RoundedBorderTextFieldStyle())
                             .padding()
@@ -57,7 +63,9 @@ struct playersNameView: View {
                             self.showView = 1
                         }, label: {
                             Text("Lets play")
-                                .padding()
+                                .font(.custom("BebasNeue-Regular", size:52))
+                                .foregroundColor(.red)
+
                         })
                     }
                 }

@@ -5,46 +5,6 @@
 //  Created by mohamad on 1/10/21.
 //
 
-//import SwiftUI
-//struct gameView: View {
-//@State var circles : [[circle]] = .init(repeating: .init(repeating: circle() , count:7 ), count: 7)
-//@State var flagx = 0
-//@State var flagy = 0
-//    var body: some View {
-//        ZStack{
-//            Color.black
-//                .ignoresSafeArea()
-//            VStack(spacing : 7){
-//                Text("")
-//                ForEach(0 ..< 7) { r in
-//                    HStack(spacing : 7){
-//                        ForEach(0 ..< 7) { c in
-//                            Button(action: {
-//                                for x in (0..<7).reversed() {
-//                                    if circles[x][r].isEmpty == true
-//                                    {
-//                                        flagy = r
-//                                        circles[x][r].isEmpty =	 false
-//                                        flagx = x
-//                                        circles[x][r].color = Color.blue
-//                                        break
-//                                    }
-//                                }
-//                            }, label: {
-//                                Text("")
-//                                    .font(.system(size: 60))
-//                                    .foregroundColor(Color.black)
-//                                    .frame(width: 50 , height: 50 , alignment : .center)
-//                                    .background(circles[flagx][flagy].color)
-//                                    .clipShape(Circle())
-//                            })
-//                        }
-//                    }
-//                }
-//            }
-//        }
-//    }
-//}
 import SwiftUI
 let userDefaults = UserDefaults.standard
 struct gameView: View {
@@ -55,16 +15,16 @@ struct gameView: View {
         formatter.dateFormat = " dd-MM-yyyy HH:mm "
         let currentDate = formatter.string(from: date)
         var statnment = ""
-        let WinnerStatmentsLosserArr = [" DESTROIED " , " got an esay win against " , " SMACHED " , " totaly annihilated "]
-        let LosserStatmentsWinnerArr = [" got the L against  " , " was compltitly destroied by  " , " tears was showwing whiel losing to  "]
+        let WinnerStatmentsLosserArr = [" DESTROYED " , " got an easy win against " , " SMASHED " , " totally annihilated " ," got the W against  "]
+        let LosserStatmentsWinnerArr = [" got the L against  " , " was completely destroyed by  " , " tears was showing while losing to  "]
         let rand = Int.random(in: 0..<2)
         if rand == 0
         {
-            statnment = "In" + currentDate + winner + WinnerStatmentsLosserArr.randomElement()! + losser
+            statnment = "In " + currentDate + " " + winner + WinnerStatmentsLosserArr.randomElement()! + losser
         }
         else
         {
-            statnment = "In" + currentDate + losser + LosserStatmentsWinnerArr.randomElement()! + winner
+            statnment = "In " + currentDate + " " + losser + LosserStatmentsWinnerArr.randomElement()! + winner
         }
         return statnment
     }
@@ -78,7 +38,6 @@ struct gameView: View {
         }
         return true
     }
-    
     @State var circles : [[circle]] = .init(repeating: .init(repeating: circle() , count:6 ), count: 7)
     @State var playerTurn: Color = Color.blue
     @State var shownPlayerTurn = ""
@@ -89,14 +48,104 @@ struct gameView: View {
     @State var winTemp : Color = Color.white
     @State private var showingAlert = false
     @State var alertbody = ""
+    @State var colorFlag = true
     func restart(){
         circles  = [[circle]](repeating: [circle](repeating: circle() , count:6 ), count: 7)
         playerTurn = Color.blue
-        shownPlayerTurn = ""
+        shownPlayerTurn = p1
         winner = ""
         losser = ""
         winTemp = Color.white
         alertbody = ""
+    }
+    var body: some View {
+        ZStack{
+            Color.black
+                .ignoresSafeArea()
+            VStack(spacing : 12){
+                HStack(spacing : 2){
+                    Text("\(shownPlayerTurn)")
+                        .font(.custom("BebasNeue-Regular", size:70))
+                        .foregroundColor(colorFlag ? .blue : .red)
+                    Text(" Turn")
+                        .font(.custom("BebasNeue-Regular", size:70))
+                        .foregroundColor(colorFlag ? .blue : .red)
+                }
+                ForEach(0 ..< 7) { r in
+                    HStack(spacing : 7){
+                        ForEach(0 ..< 6) { c in
+                            Button(action: {
+                                colorFlag.toggle()
+                                for x in (0..<7).reversed() {
+                                    if circles[x][c].isEmpty == true
+                                    {
+                                        circles[x][c].isEmpty = false
+                                        if playerTurn == Color.blue {
+                                            circles[x][c].color = Color.blue
+                                        }
+                                        else{
+                                            circles[x][c].color = Color.red
+                                        }
+                                        break
+                                    }
+                                }
+                                if isDraw(){
+                                    alertbody = "what a boaring game 😑"
+                                    showingAlert = true
+                                }
+                                if playerTurn == Color.blue {
+                                    playerTurn = Color.red
+                                    shownPlayerTurn = p2
+                                }
+                                else {
+                                    playerTurn = Color.blue
+                                    shownPlayerTurn = p1
+                                }
+                                let winTemp = getWinner()
+                                if winTemp != Color.white {
+                                    if winTemp == Color.blue {
+                                        winner = p1
+                                        losser = p2
+                                    }
+                                    else {
+                                        winner = p2
+                                        losser = p1
+                                    }
+                                    var strings = userDefaults.object(forKey: "myKey") as? [String]
+                                    if strings == nil {
+                                        let newTempArr = [getRandStatment()]
+                                        userDefaults.set(newTempArr, forKey: "myKey")
+                                    }
+                                    else{
+                                    strings!.append(getRandStatment())
+                                    userDefaults.set(strings, forKey: "myKey")
+                                    }
+                                    alertbody = winner + " wins"
+                                    showingAlert = true
+                                }
+                            }, label: {
+                                Text("")
+                                    .font(.system(size: 60))
+                                    .foregroundColor(Color.black)
+                                    .frame(width: 55 , height: 55 , alignment : .center)
+                                    .background(circles[r][c].color)
+                                    .clipShape(Circle())
+                            })
+                            
+                        }
+                    }
+                }.alert(isPresented: $showingAlert) {
+                    Alert(title: Text("Game Over"), message: Text(alertbody),
+                          dismissButton: Alert.Button.default(
+                              Text("play again"), action: { restart() }
+                          )
+                      )
+                }
+            }
+        }.onAppear(perform: {
+            shownPlayerTurn = p1
+            restart()
+        })
     }
     func getWinner() -> Color {
         if circles[0][0].color == Color.blue &&  circles[1][0].color == Color.blue &&  circles[2][0].color == Color.blue &&  circles[3][0].color == Color.blue {return Color.blue}
@@ -238,88 +287,6 @@ struct gameView: View {
         if circles[6][5].color == Color.blue &&  circles[5][4].color == Color.blue &&  circles[4][3].color == Color.blue &&  circles[3][2].color == Color.blue {return Color.blue}
         if circles[6][5].color == Color.red &&  circles[5][4].color == Color.red &&  circles[4][3].color == Color.red &&  circles[3][2].color == Color.red {return Color.red}
         return Color.white
-    }
-    var body: some View {
-        ZStack{
-            Color.black
-                .ignoresSafeArea()
-            VStack(spacing : 7){
-                Text("\(shownPlayerTurn)" )
-                    .foregroundColor(.white)
-                Text("")
-                    .foregroundColor(.white)
-                ForEach(0 ..< 7) { r in
-                    HStack(spacing : 7){
-                        ForEach(0 ..< 6) { c in
-                            Button(action: {
-                                
-                                for x in (0..<7).reversed() {
-                                    if circles[x][c].isEmpty == true
-                                    {
-                                        circles[x][c].isEmpty = false
-                                        if playerTurn == Color.blue {
-                                            circles[x][c].color = Color.blue
-                                        }
-                                        else{
-                                            circles[x][c].color = Color.red
-                                        }
-                                        break
-                                    }
-                                }
-                                if isDraw(){
-                                    alertbody = "what a boaring game !"
-                                    showingAlert = true
-                                }
-                                if playerTurn == Color.blue {
-                                    playerTurn = Color.red
-                                    shownPlayerTurn = p2 + " Turn"
-                                }
-                                else {
-                                    playerTurn = Color.blue
-                                    shownPlayerTurn = p1 + " Turn"
-                                }
-                                let winTemp = getWinner()
-                                if winTemp != Color.white {
-                                    if winTemp == Color.blue {
-                                        winner = p1
-                                        losser = p2
-                                    }
-                                    else {
-                                        winner = p2
-                                        losser = p1
-                                    }
-                                    var strings = userDefaults.object(forKey: "myKey") as? [String]
-                                    if strings == nil {
-                                        var newTempArr = [getRandStatment()]
-                                        userDefaults.set(newTempArr, forKey: "myKey")
-                                    }
-                                    else{
-                                    strings!.append(getRandStatment())
-                                    userDefaults.set(strings, forKey: "myKey")
-                                    }
-                                    alertbody = winner + "wins"
-                                    showingAlert = true
-                                }
-                            }, label: {
-                                Text("")
-                                    .font(.system(size: 60))
-                                    .foregroundColor(Color.black)
-                                    .frame(width: 50 , height: 50 , alignment : .center)
-                                    .background(circles[r][c].color)
-                                    .clipShape(Circle())
-                            })
-                            
-                        }
-                    }
-                }.alert(isPresented: $showingAlert) {
-                    Alert(title: Text("Game Over"), message: Text(alertbody),
-                          dismissButton: Alert.Button.default(
-                              Text("play again"), action: { restart() }
-                          )
-                      )
-                }
-            }
-        }
     }
 }
 

@@ -4,13 +4,13 @@
     //
     //  Created by mohamad on 1/10/21.
     //
-    
+    // Main page
     import SwiftUI
     
     struct ContentView: View {
-        @State var showingPopup = false
-        @State var f1 = false
-        @State var f2 = false
+        @State var showingPopup = false //for easter egg
+        @State var f1 = false //for easter egg
+        @State var f2 = false //for easter egg
         var body: some View {
             ZStack {
                 NavigationView(){
@@ -31,7 +31,7 @@
                                 destination: playersNameView(),
                                 label: {
                                     Text("play")
-                                        .font(.custom("prstart", size: 48, relativeTo: .body))
+                                        .font(.custom("BebasNeue-Regular", size:48))
                                         .foregroundColor(.red)
                                         .padding()
                                 }).onLongPressGesture {
@@ -41,8 +41,8 @@
                             NavigationLink(
                                 destination: recoredsView(),
                                 label: {
-                                    Text("Games Recores")
-                                        .font(.custom("prstart", size: 48, relativeTo: .body))
+                                    Text("Games Records")
+                                        .font(.custom("BebasNeue-Regular", size:48))
                                         .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
                                         .padding()
                                 }).onLongPressGesture {
@@ -60,7 +60,7 @@
                     Text("🎉Congratulations🎉")
                         .font(.largeTitle)
                         .foregroundColor(.black)
-                    Text("you found the easter egg , send the sceenshoot to the discored channel to recive your price  ")
+                    Text("you found the easter egg , send the sceenshoot to the discored channel to recive your prize  ")
                         .foregroundColor(.black)
                 }
                 .frame(width:300   , height: 300 )

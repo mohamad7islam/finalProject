@@ -7,29 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		D123A3F825AE6EE8001F6B20 /* rm_playtime_solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D123A3F725AE6EE8001F6B20 /* rm_playtime_solid.ttf */; };
-		D123A3FB25AE6EF5001F6B20 /* rm_playtime_3d.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D123A3FA25AE6EF5001F6B20 /* rm_playtime_3d.ttf */; };
 		D13402B725AA6080001F3EC0 /* playersNameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13402B625AA6080001F3EC0 /* playersNameView.swift */; };
 		D13402BB25AA624E001F3EC0 /* gameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13402BA25AA624E001F3EC0 /* gameView.swift */; };
 		D13402BE25AA626E001F3EC0 /* recoredsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13402BD25AA626E001F3EC0 /* recoredsView.swift */; };
 		D13402C125AA6A06001F3EC0 /* circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13402C025AA6A06001F3EC0 /* circle.swift */; };
+		D15C657625B1147C00D8248B /* BebasNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D15C657525B1147C00D8248B /* BebasNeue-Regular.ttf */; };
 		D166FA4E25ABC35D00BB6FA8 /* winlogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D166FA4D25ABC35D00BB6FA8 /* winlogic.swift */; };
 		D177C65725AA52FC00ECF35B /* Funtastic_4App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D177C65625AA52FC00ECF35B /* Funtastic_4App.swift */; };
 		D177C65925AA52FC00ECF35B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D177C65825AA52FC00ECF35B /* ContentView.swift */; };
 		D177C65B25AA52FE00ECF35B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D177C65A25AA52FE00ECF35B /* Assets.xcassets */; };
 		D177C65E25AA52FE00ECF35B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D177C65D25AA52FE00ECF35B /* Preview Assets.xcassets */; };
 		D1B98E5925AE239600439E56 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1B98E5825AE239600439E56 /* PopupView.swift */; };
-		D1D1A96B25AE6FDD005AF967 /* prstart.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D1D1A96A25AE6FDD005AF967 /* prstart.ttf */; };
 		D1D1A97525AE7368005AF967 /* loadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D1A97425AE7368005AF967 /* loadingView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		D123A3F725AE6EE8001F6B20 /* rm_playtime_solid.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = rm_playtime_solid.ttf; sourceTree = "<group>"; };
-		D123A3FA25AE6EF5001F6B20 /* rm_playtime_3d.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = rm_playtime_3d.ttf; sourceTree = "<group>"; };
 		D13402B625AA6080001F3EC0 /* playersNameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = playersNameView.swift; sourceTree = "<group>"; };
 		D13402BA25AA624E001F3EC0 /* gameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gameView.swift; sourceTree = "<group>"; };
 		D13402BD25AA626E001F3EC0 /* recoredsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recoredsView.swift; sourceTree = "<group>"; };
 		D13402C025AA6A06001F3EC0 /* circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = circle.swift; sourceTree = "<group>"; };
+		D15C657525B1147C00D8248B /* BebasNeue-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Regular.ttf"; sourceTree = "<group>"; };
 		D166FA4D25ABC35D00BB6FA8 /* winlogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = winlogic.swift; sourceTree = "<group>"; };
 		D177C65325AA52FC00ECF35B /* Funtastic 4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Funtastic 4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D177C65625AA52FC00ECF35B /* Funtastic_4App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Funtastic_4App.swift; sourceTree = "<group>"; };
@@ -38,7 +35,6 @@
 		D177C65D25AA52FE00ECF35B /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		D177C65F25AA52FE00ECF35B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D1B98E5825AE239600439E56 /* PopupView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
-		D1D1A96A25AE6FDD005AF967 /* prstart.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = prstart.ttf; sourceTree = "<group>"; };
 		D1D1A97425AE7368005AF967 /* loadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loadingView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -53,16 +49,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		D123A3E425AE6B7A001F6B20 /* Fonts */ = {
-			isa = PBXGroup;
-			children = (
-				D1D1A96A25AE6FDD005AF967 /* prstart.ttf */,
-				D123A3FA25AE6EF5001F6B20 /* rm_playtime_3d.ttf */,
-				D123A3F725AE6EE8001F6B20 /* rm_playtime_solid.ttf */,
-			);
-			path = Fonts;
-			sourceTree = "<group>";
-		};
 		D13402B525AA6064001F3EC0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -96,8 +82,8 @@
 		D177C65525AA52FC00ECF35B /* Funtastic 4 */ = {
 			isa = PBXGroup;
 			children = (
-				D123A3E425AE6B7A001F6B20 /* Fonts */,
 				D177C65625AA52FC00ECF35B /* Funtastic_4App.swift */,
+				D15C657525B1147C00D8248B /* BebasNeue-Regular.ttf */,
 				D177C65825AA52FC00ECF35B /* ContentView.swift */,
 				D13402B525AA6064001F3EC0 /* Views */,
 				D177C65A25AA52FE00ECF35B /* Assets.xcassets */,
@@ -172,11 +158,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D123A3F825AE6EE8001F6B20 /* rm_playtime_solid.ttf in Resources */,
 				D177C65E25AA52FE00ECF35B /* Preview Assets.xcassets in Resources */,
+				D15C657625B1147C00D8248B /* BebasNeue-Regular.ttf in Resources */,
 				D177C65B25AA52FE00ECF35B /* Assets.xcassets in Resources */,
-				D123A3FB25AE6EF5001F6B20 /* rm_playtime_3d.ttf in Resources */,
-				D1D1A96B25AE6FDD005AF967 /* prstart.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
