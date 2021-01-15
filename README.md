@@ -14,12 +14,19 @@ the game has four main Views :
 ## Screenshots 📸
 
 ### Main(home)View
+
 <div><img src="./screenshots/Home.jpeg" width="250" hight="700" ></div>
+
 ### Records View 
+
 <div><img src="./screenshots/records.jpeg" width="250" hight="700" ></div>
+
 ### Player names View 
+
 <div><img src="./screenshots/playersNameView.jpeg" width="250" hight="700" ></div>
+
 ### Game View  
+
 <div><img src="./screenshots/game.jpeg" width="250" hight="700" ></div>
 
 ## New features ✨
