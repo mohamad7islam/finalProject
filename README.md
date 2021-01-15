@@ -11,18 +11,18 @@ the game has four main Views :
 - Player names view : a View that allows players to enter their names before the start of the game 
 - Game view : where platers can play the game 
 
-##Screenshots 📸
+## Screenshots 📸
 
-Main(home)View
+### Main(home)View
 <div><img src="./screenshots/Home.jpeg" width="250" hight="700" ></div>
-Records View
+### Records View
 <div><img src="./screenshots/records.jpeg" width="250" hight="700" ></div>
-Player names view
+### Player names view
 <div><img src="./screenshots/playersNameView.jpeg" width="250" hight="700" ></div>
-Game view 
+### Game view 
 <div><img src="./screenshots/game.jpeg" width="250" hight="700" ></div>
 
-##New features ✨
+## New features ✨
 - The game records every game result so your friends dint deny that you DESTROYED them.
 - You can share the results from the records view by long press on the recored itself.
 - Cool chips sound
