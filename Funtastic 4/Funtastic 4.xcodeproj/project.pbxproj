@@ -12,6 +12,7 @@
 		D13402BE25AA626E001F3EC0 /* recoredsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13402BD25AA626E001F3EC0 /* recoredsView.swift */; };
 		D13402C125AA6A06001F3EC0 /* circle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13402C025AA6A06001F3EC0 /* circle.swift */; };
 		D15C657625B1147C00D8248B /* BebasNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D15C657525B1147C00D8248B /* BebasNeue-Regular.ttf */; };
+		D15C657A25B12CE100D8248B /* chip.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D15C657925B12CE100D8248B /* chip.mp3 */; };
 		D166FA4E25ABC35D00BB6FA8 /* winlogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = D166FA4D25ABC35D00BB6FA8 /* winlogic.swift */; };
 		D177C65725AA52FC00ECF35B /* Funtastic_4App.swift in Sources */ = {isa = PBXBuildFile; fileRef = D177C65625AA52FC00ECF35B /* Funtastic_4App.swift */; };
 		D177C65925AA52FC00ECF35B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D177C65825AA52FC00ECF35B /* ContentView.swift */; };
@@ -27,6 +28,7 @@
 		D13402BD25AA626E001F3EC0 /* recoredsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = recoredsView.swift; sourceTree = "<group>"; };
 		D13402C025AA6A06001F3EC0 /* circle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = circle.swift; sourceTree = "<group>"; };
 		D15C657525B1147C00D8248B /* BebasNeue-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Regular.ttf"; sourceTree = "<group>"; };
+		D15C657925B12CE100D8248B /* chip.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = chip.mp3; sourceTree = "<group>"; };
 		D166FA4D25ABC35D00BB6FA8 /* winlogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = winlogic.swift; sourceTree = "<group>"; };
 		D177C65325AA52FC00ECF35B /* Funtastic 4.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Funtastic 4.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D177C65625AA52FC00ECF35B /* Funtastic_4App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Funtastic_4App.swift; sourceTree = "<group>"; };
@@ -84,6 +86,7 @@
 			children = (
 				D177C65625AA52FC00ECF35B /* Funtastic_4App.swift */,
 				D15C657525B1147C00D8248B /* BebasNeue-Regular.ttf */,
+				D15C657925B12CE100D8248B /* chip.mp3 */,
 				D177C65825AA52FC00ECF35B /* ContentView.swift */,
 				D13402B525AA6064001F3EC0 /* Views */,
 				D177C65A25AA52FE00ECF35B /* Assets.xcassets */,
@@ -160,6 +163,7 @@
 			files = (
 				D177C65E25AA52FE00ECF35B /* Preview Assets.xcassets in Resources */,
 				D15C657625B1147C00D8248B /* BebasNeue-Regular.ttf in Resources */,
+				D15C657A25B12CE100D8248B /* chip.mp3 in Resources */,
 				D177C65B25AA52FE00ECF35B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -6,8 +6,22 @@
 //
 
 import SwiftUI
-let userDefaults = UserDefaults.standard
+import AVFoundation
+let userDefaults = UserDefaults.standard //for loading and stoing data
+var chipsSoundEffect: AVAudioPlayer? //for sound
 struct gameView: View {
+    func playChipsSound()
+    {
+       
+        let path = Bundle.main.path(forResource: "chip.mp3", ofType:nil)!
+        let url = URL(fileURLWithPath: path)
+        do {
+            chipsSoundEffect = try AVAudioPlayer(contentsOf: url)
+            chipsSoundEffect?.play()
+        } catch {
+            print("Erorr")
+        }
+    }
     func getRandStatment() -> String
     {
         let date = Date()
@@ -57,6 +71,7 @@ struct gameView: View {
         losser = ""
         winTemp = Color.white
         alertbody = ""
+        colorFlag = true
     }
     var body: some View {
         ZStack{
@@ -75,6 +90,7 @@ struct gameView: View {
                     HStack(spacing : 7){
                         ForEach(0 ..< 6) { c in
                             Button(action: {
+                                playChipsSound()
                                 colorFlag.toggle()
                                 for x in (0..<7).reversed() {
                                     if circles[x][c].isEmpty == true
@@ -289,29 +305,3 @@ struct gameView: View {
         return Color.white
     }
 }
-
-//func circleColor() -> Color {
-//    if circles
-//}
-//func fillcircles()
-//{
-//    for x in 1...7{
-//        for y in 1...6 {
-//            circles[x][y].x = x
-//            circles[x][y].y = y
-//        }
-//    }
-//
-//
-//}
-//struct gameView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        gameView(p1: "Test ", p2: "Test")
-//            .previewDevice("iPhone 11")
-//    }
-//} .alert(isPresented:$showingAlert) {
-//Alert(title: Text("Are you sure you want to delete this?"), message: Text("There is no undo"), primaryButton: .destructive(Text("Delete")) {
-//        print("Deleting...")
-//}, secondaryButton: .cancel())
-//}
-//}
