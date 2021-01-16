@@ -30,7 +30,7 @@ The game has four main Views :
 <div><img src="./screenshots/game.jpeg" width="250" hight="700" ></div>
 
 ## New features ✨
-- The game records every game result so your friends dint deny that you DESTROYED them.
+- The game records every game result so your friends dont deny that you DESTROYED them.
 - You can share the results from the records view by long press on the recored itself.
 - Cool chips sound.
 - Animated loading screen.
